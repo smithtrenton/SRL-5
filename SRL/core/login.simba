@@ -112,8 +112,8 @@ procedure TakeIPScreen();
 var
   tmpPath: string;
 begin
-  if ((not lobbyScreen()) or (SRL_DisableIPLog)) then
-    exit;
+  if SRL_DisableIPLog or not LobbyScreen() then
+    Exit;
 
   tmpPath := SRL_SavePath;
   SRL_SavePath := tmpPath + 'IPLogs/'; // so TakeScreen saves to the right directory
