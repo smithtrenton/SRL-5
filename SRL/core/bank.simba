@@ -4,6 +4,31 @@ Bank
 
 The Bank include contains Bank finders, and all banking routines.
 
+Normal Banks:
+'feb' = Falador East Bank
+'fwb' = Falador West Bank
+'veb' = Varrock East Bank
+'vwb' = Varrock West Bank
+'geb' = Varrock GE Bank
+'db'  = Draynor Bank
+'akb' = Al-Kharid Bank
+'eb'  = Edgeville Bank
+'ctb' = Catherby bank
+'clt' = Camelot bank
+'nab' = North Ardougne bank
+'sab' = South Ardougne bank
+'ynb' = Yanille bank
+'ngb' = North gnome bank
+'sgb' = South gnome bank
+'wgb' = Warrior guild bank
+'fgb' = Fishing guild bank
+
+Special Bank:
+SRL_BANK_SW = Soul Wars chest
+SRL_BANK_CW = Castle Wars chest
+SRL_BANK_B  = Burthrope chest (outside warriors guild)
+SRL_BANK_GG = Gamer's Grotto (north of Falador)
+
 .. contents::
 
 *)
@@ -626,7 +651,7 @@ begin
   if not BankScreen then
     Exit;
   for Result := 1 to 9 do
-    if GetColor(40 + 48 * (Result - 1), 83) = 2896954 then
+    if GetColor(40 + 48 * (Result - 1), 83) = 2831161 then //Left of the bottom boundary of the tab
       Exit;
   Result := 0;
 end;
